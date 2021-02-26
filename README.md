@@ -1,6 +1,6 @@
 # Module Project: Component Side Effects- NASA APOD
 
-This will be a two-module project. In it you will consume the NASA API to fetch the "Astronomy Photo Of The Day" or APOD. Once you fetch the data, you will build a few components that will render different pieces of data in your interface. After the second module (in the [DAY_TWO_README.md](DAY_TWO_README.md) file) you will re-style your app using one of the libraries you learn. 
+This will be a two-module project. In it you will consume the NASA API to fetch the "Astronomy Photo Of The Day" or APOD. Once you fetch the data, you will build a few components that will render different pieces of data in your interface. After the second module (in the [DAY_TWO_README.md](DAY_TWO_README.md) file) you will re-style your app using one of the libraries you learn.
 
 ## Instructions
 
@@ -27,12 +27,12 @@ In this project you will build out a application to show the nasa photo of the d
 
 This project was put together using create-react-app (CRA). You will not need to install CRA in order to make this project work. Follow the steps below to setup the project with the proper dependencies.
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your team lead as collaborator on Github.
-- [ ] Clone your OWN version of the repository in your terminal
-- [ ] Download project dependencies by running `npm install`
-- [ ] Start up the app using `npm start`
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [X] Create a forked copy of this project.
+- [X] Add your team lead as collaborator on Github.
+- [X] Clone your OWN version of the repository in your terminal
+- [X] Download project dependencies by running `npm install`
+- [X] Start up the app using `npm start`
+- [X] Create a new branch: git checkout -b `<firstName-lastName>`.
       Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
 - [ ] Push commits: git push origin `<firstName-lastName>`.
 
@@ -41,27 +41,40 @@ This project was put together using create-react-app (CRA). You will not need to
 
 **Planning**
 
-- [ ] If you want, this is the time to make a simple design spec (look up ["simple wireframes"](https://www.google.com/search?q=simple+wireframes) to find resources & examples). **A pen & paper sketch (or outline) is often the fastest way to start your planning.**
-- [ ] Once you have a design plan in mind, break down the designs into individual components.
+- [X] If you want, this is the time to make a simple design spec (look up ["simple wireframes"](https://www.google.com/search?q=simple+wireframes) to find resources & examples). **A pen & paper sketch (or outline) is often the fastest way to start your planning.**
+- [X] Once you have a design plan in mind, break down the designs into individual components.
 - [ ] Plan which components will hold state, what data each needs from props (if any), and where you will be making your data fetch.
-- [ ] Now it's time to jump into the code!
+- [X] Now it's time to jump into the code!
 
 **File structure**
 
-- [ ] Take a look at your planned components. Create the folders and files you need for each component.
-- [ ] Leave most of them blank for now - you need to get your data from the API before you can really get these built.
+- [X] Take a look at your planned components. Create the folders and files you need for each component.
+- [X] Leave most of them blank for now - you need to get your data from the API before you can really get these built.
 
 **Fetching the Data**
 
-- [ ] In `App.js` (or where ever you wanted to fetch the data) add state for the data you'll be getting from NASA.
-- [ ] Add an effect hook to handle the API call side effect.
-- [ ] Go to the [NASA APOD API docs](https://api.nasa.gov/#apod) and read through the docs to see how to make the API call.
-- [ ] You don't _need_ an API key. However you may need one if you exceed the API request limits.
-- [ ] Using the endpoint given, fetch the data using `axios`.
-- [ ] In your `.then()` make sure to `console.log` the response so you can look at the shape of the data. 😃
-- [ ] Before you add your data to state, make sure your effect hook has a dependency array (probably empty, since we don't want this effect synced up to any state/props), otherwise you will start an **infinite loop, and you will exceed the API rate limits of the DEMO_KEY and need to use a real API_KEY.**
+- [X] In `App.js` (or where ever you wanted to fetch the data) add state for the data you'll be getting from NASA.
+- [X] Add an effect hook to handle the API call side effect.
+- [X] Go to the [NASA APOD API docs](https://api.nasa.gov/#apod) and read through the docs to see how to make the API call.
+- [X] You don't _need_ an API key. However you may need one if you exceed the API request limits.
+- [X] Using the endpoint given, fetch the data using `axios`.
+- [X] In your `.then()` make sure to `console.log` the response so you can look at the shape of the data. 😃
+- [X] Before you add your data to state, make sure your effect hook has a dependency array (probably empty, since we don't want this effect synced up to any state/props), otherwise you will start an **infinite loop, and you will exceed the API rate limits of the DEMO_KEY and need to use a real API_KEY.**
 
 DEMO KEY rate limits:
+API KEY: https://api.nasa.gov/planetary/apod?api_key=4nWmVm7AVNFDhUPcEvQYQlfY9FDu0gVIqsiX2fP1
+Endpoint: GET https://api.nasa.gov/planetary/apod
+Example Data:
+{
+  "date": "2020-11-17",
+  "explanation":
+      "What's creating these long glowing streaks in the sky? No one is sure.  Known as Strong Thermal Emission Velocity Enhancements (STEVEs), these luminous   light-purple sky ribbons may resemble regular auroras, but recent research reveals significant differences. A STEVE's great length and unusual colors, when measured precisely, indicate that it may be related to a subauroral ion drift (SAID), a supersonic river of hot atmospheric ions thought previously to be invisible.  Some STEVEs are now also thought to be accompanied by green picket fence structures, a series of sky slats that can appear outside of the main auroral oval that does not involve much glowing nitrogen. The featured wide-angle composite image shows a STEVE in a dark sky above Childs Lake, Manitoba, Canada in 2017, crossing in front of the central band of our Milky Way Galaxy.",
+  "hdurl": "https://apod.nasa.gov/apod/image/2011/SteveMilkyWay_NasaTrinder_6144.jpg",
+  "media_type": "image",
+  "service_version": "v1",
+  "title": "A Glowing STEVE and the Milky Way",
+  "url": "https://apod.nasa.gov/apod/image/2011/SteveMilkyWay_NasaTrinder_960.jpg"
+}
 
 > Hourly Limit: 30 requests per IP address per hour
 
